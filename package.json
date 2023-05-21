@@ -1,0 +1,38 @@
+{
+  "name": "eventspec",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index",
+  "types": "lib/index",
+  "bin": {
+    "eventspec": "./lib/bin/eventspec.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -p .",
+    "commit": "npx cz",
+    "release": "npm run build && npm run build-docs && git add . && npm run commit && standard-version"
+  },
+  "author": "Anthony Manning-Franklin <anthony.manning.franklin@gmail.com> (https://antman-does-software.com)",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.24",
+    "commitizen": "^4.3.0",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8",
+    "standard-version": "^9.5.0",
+    "typed-emitter": "^2.1.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "log-symbols": "^5.1.0",
+    "supports-color": "^9.3.1",
+    "yargs": "^17.7.2"
+  }
+}
